@@ -3,7 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://github.com/makashish/quizexamfrontend",
+    "homepage": "https://makashish.github.io/quizexamfrontend/",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
@@ -12,6 +12,9 @@
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
+        "@capacitor/android": "^7.4.2",
+        "@capacitor/cli": "^7.4.2",
+        "@capacitor/core": "^7.4.2",
         "axios": "^1.11.0",
         "react": "^19.1.1",
         "react-dom": "^19.1.1",
