@@ -10,7 +10,7 @@ export default function StartPage() {
 
   // Fetch quiz time from public folder
   useEffect(() => {
-    fetch("/quiz-time.json")
+    fetch(`${import.meta.env.BASE_URL}quiz-time.json`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load quiz-time.json");
         return res.json();

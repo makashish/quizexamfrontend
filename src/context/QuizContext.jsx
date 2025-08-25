@@ -17,7 +17,7 @@ export const QuizProvider = ({ children }) => {
 
   // ✅ Load time.json once
   useEffect(() => {
-    fetch("/time.json")
+    fetch(`${import.meta.env.BASE_URL}time.json`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load time.json");
         return res.json();
