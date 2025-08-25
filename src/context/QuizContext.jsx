@@ -33,7 +33,7 @@ export const QuizProvider = ({ children }) => {
 
   // ✅ Load config.json
   useEffect(() => {
-    fetch("/config.json")
+fetch(`${import.meta.env.BASE_URL}config.json`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load config.json");
         return res.json();
