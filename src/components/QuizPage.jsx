@@ -48,7 +48,7 @@ export default function QuizPage() {
     <div className="quiz-page-container">
       {/* Left panel: Grid and Timer */}
       <div className="quiz-left-panel">
-        <h3>{t("question_grid")}</h3>
+        <h3 className="Ques">{t("question_grid")}</h3>
         <QuestionGrid />
         <div className="time-display">{formatTime(timeLeft)}</div>
       </div>

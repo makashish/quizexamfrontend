@@ -131,30 +131,33 @@ body {
 /* ✅ Responsive improvements for Android/mobile */
 
 @media (max-width: 768px) {
+    .para {
+        font-size: 25px;
+    }
+    .Ques {
+        font-size: 10px;
+    }
     .quiz-page-container {
         flex-direction: row;
     }
     .quiz-left-panel {
-        width: 5%;
+        width: 2%;
         padding: 1rem;
     }
     .quiz-right-panel {
-        width: 95%;
+        width: 98%;
         padding: 1rem;
     }
     .question-grid {
-        grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
-        gap: 8px;
+        grid-template-columns: repeat(auto-fill, minmax(5px, 1fr));
+        gap: 1px;
+        font-size: 5px;
     }
     .question-grid button {
-        padding: 0.2rem;
-        font-size: 0.9rem;
+        padding: 0.1rem;
+        font-size: 1rem;
     }
     .time-display {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin: 1rem auto 0 auto;
         text-align: center;
         font-size: 1.5rem;
     }

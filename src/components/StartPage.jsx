@@ -25,7 +25,7 @@ export default function StartPage() {
 
   return (
     <div style={{ padding: "4rem", maxWidth: "800px", margin: "auto" }}>
-      <h1>{t("quiz_instructions")}</h1>
+      <h1 className="para">{t("quiz_instructions")}</h1>
       <h5>{t("app_instructions")}</h5>
 
       <p>
