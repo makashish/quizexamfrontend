@@ -32,17 +32,32 @@ export const QuizProvider = ({ children }) => {
   }, []);
 
   // ✅ Load config.json
-  useEffect(() => {
-fetch(`${import.meta.env.BASE_URL}config.json`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to load config.json");
-        return res.json();
-      })
-      .then((config) => {
-        setApiBaseUrl(config.API_BASE_URL);
-      })
-      .catch((err) => console.error(err));
-  }, []);
+
+useEffect(() => {
+  fetch(`${import.meta.env.BASE_URL}config.json`)
+    .then((res) => {
+      if (!res.ok) throw new Error("Config not found");
+      return res.json();
+    })
+    .then((config) => {
+      console.log("Loaded config:", config);
+      // apply values from config.json
+      setApiBaseUrl(config.API_BASE_URL);
+    })
+    .catch((err) => {
+      console.warn("Using default config:", err);
+      // fallback default config
+      const defaultConfig = {
+        appName: "quizexam",
+        defaultTime: 120,
+        shuffleQuestions: false,
+        theme: "light",
+        API_BASE_URL: "https://quizuserbackend.onrender.com"
+      };
+      console.log(defaultConfig);
+      setApiBaseUrl(defaultConfig.API_BASE_URL);
+    });
+}, []);
 
   // ✅ Fetch questions from API
   useEffect(() => {
